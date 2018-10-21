@@ -3,6 +3,7 @@ version: "3.3"
 services:
   app:
     image: inspectorio/prediction-io
+    container_name: pio
     volumes:
     - ./:/home/pio/app/src
     - ~/.ssh:/home/pio/.ssh
@@ -23,10 +24,12 @@ services:
 
   postgres:
     image: postgres:9.6
+    container_name: pio-postgres
     environment:
       POSTGRES_USER: pio
       POSTGRES_PASSWORD: pio
       POSTGRES_DB: pio
 
   elasticsearch:
+    container_name: pio-es
     image: inspectorio/elasticsearch-without-xpack
