@@ -33,3 +33,7 @@ services:
   elasticsearch:
     container_name: pio-es
     image: inspectorio/elasticsearch-without-xpack
+
+  networks:
+    backend:
+      driver: "bridge"
