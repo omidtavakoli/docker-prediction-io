@@ -27,7 +27,7 @@ $ docker-compose up
  # open a new terminal and run below command to ssh into pio container
 $ docker-compose exec app sh
  $ pio status # check pio status
-$ pio eventserver
+$ pio eventserver &
 $ pio app new **your-app-name-here** #specify the appName used in the template's engine.json file (you can see it in the current directory)
- Feed data through sdk and use pio train & deploy. Also, note that default UR integration tests are trimmed and thus, can't be run.
+ Feed data through sdk and use pio train & pio deploy. Also, note that default UR integration tests are trimmed and thus, can't be run.
 ```
