@@ -21,6 +21,8 @@ services:
       PIO_DB_PASSWORD: pio
       ES_HOST: elasticsearch
       ES_PORT: 9200
+    networks: 
+      - backend
 
   postgres:
     image: postgres:9.6
@@ -29,10 +31,14 @@ services:
       POSTGRES_USER: pio
       POSTGRES_PASSWORD: pio
       POSTGRES_DB: pio
+    networks: 
+      - backend
 
   elasticsearch:
     container_name: pio-es
     image: inspectorio/elasticsearch-without-xpack
+    networks: 
+      - backend
 
   networks:
     backend:
