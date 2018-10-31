@@ -49,10 +49,10 @@ RUN curl -sSL https://archive.apache.org/dist/predictionio/${PIO_VERSION}/apache
 # &&  cp -vf ${UR_HOME}/template.json ${APP_HOME}/template.json \
 # &&  rm -rf ${UR_HOME} ~/.sbt ~/.ivy2/
 
-# # pio-env.sh
-# COPY conf/ ${PIO_HOME}/conf/
-# RUN chown -R pio:pio ${PIO_HOME}
+# pio-env.sh
+COPY conf/ ${PIO_HOME}/conf/
+RUN chown -R pio:pio ${PIO_HOME}
 
-# WORKDIR ${APP_HOME}
-# USER pio
-# CMD ["pio"]
+WORKDIR ${APP_HOME}
+USER pio
+CMD ["pio"]
