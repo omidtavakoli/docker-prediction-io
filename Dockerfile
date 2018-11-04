@@ -19,6 +19,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 # SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
+
 # Apache PredictionIO, Spark and JDBC PostgreSQL driver
 # RUN curl -sSL https://archive.apache.org/dist/predictionio/${PIO_VERSION}/apache-predictionio-${PIO_VERSION}-bin.tar.gz | tar -xzpf - --strip-components=1 -C ${PIO_HOME}
 RUN curl -sSL https://archive.apache.org/dist/predictionio/0.12.1/apache-predictionio-0.12.1-bin.tar.gz | tar -xzpf - --strip-components=1 -C ${PIO_HOME}
